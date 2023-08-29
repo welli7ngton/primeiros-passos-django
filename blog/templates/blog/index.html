@@ -5,12 +5,7 @@
 {% endblock texto %}
 
 {% block Posts %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
-{% include 'global/partials/post_block.html' %}
+    {% for post in posts %}
+        {% include 'global/partials/post_block.html' %}
+    {% endfor %}
 {% endblock Posts %}

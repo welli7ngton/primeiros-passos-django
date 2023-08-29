@@ -1,7 +1,14 @@
 {% include 'global/partials/head.html' %}
 {% include 'global/partials/menu.html' %}
 
-<h1>{% block texto %}{% endblock texto %}</h1>
+{% comment %}
+    estrutura condicional para verificar a existencia de titulos
+{% endcomment %}
+
+{% if text %}
+    <h1>{% block texto %}{% endblock texto %}</h1>
+{% endif %}
+
 
 <main class="content">
     {% block Posts %}{% endblock Posts %}
