@@ -7,7 +7,7 @@ def blog(request):
     print("Blog")
     context = {
         'text': "Estou no Blog",
-        'title': 'exemplo'
+        'title': 'Blog'
     }
     return render(
         request,
@@ -19,8 +19,8 @@ def blog(request):
 def example(request):
     print("Blog")
     context = {
-        'text': "Estou no example",
-        'title': "Blog",
+        'text': "Estou no Example",
+        'title': "Example",
     }
     return render(
         request,
