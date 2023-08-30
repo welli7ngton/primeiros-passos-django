@@ -2,6 +2,7 @@ __localcode
 .DS_Store
 chromedriver
 .env
+static_files
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
