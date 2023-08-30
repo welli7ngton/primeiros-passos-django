@@ -5,6 +5,15 @@
     text-decoration: none;
 }
 
+a {
+    text-transform: capitalize;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -37,6 +46,7 @@ body {
     color: rgb(44, 43, 43);
     background-color: aliceblue;
     transition: all 200ms ease-in-out;
+    text-decoration: none;
 }
 
 .content {
