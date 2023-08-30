@@ -7,7 +7,7 @@ from blog.data import posts
 def blog(request):
     print("Blog")
     context = {
-        'text': "Estou no Blog",
+        'text': "Titulo Blog",
         'title': 'Blog',
         'posts': posts
     }
@@ -28,4 +28,18 @@ def example(request):
         request,
         'blog/example.html',
         context
+    )
+
+
+def post(request, id):
+    print("Post", id)
+    context = {
+        'text': "Titulo Blog",
+        'title': 'Blog',
+        'posts': posts
+    }
+    return render(
+        request,
+        'blog/index.html',
+        context=context
     )
