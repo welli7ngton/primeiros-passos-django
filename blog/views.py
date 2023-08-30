@@ -1,6 +1,7 @@
 # from django.http import HttpResponse
 from django.shortcuts import render
 from blog.data import posts
+from django.http import Http404
 
 
 # Create your views here.
@@ -31,15 +32,23 @@ def example(request):
     )
 
 
-def post(request, id):
-    print("Post", id)
+def post(request, _id):
+    print("Post", _id)
+    foundPost = None
+    for post in posts:
+        if post['id'] == _id:
+            foundPost = post
+            break
+
+    if foundPost is None:
+        raise Http404("Pagina não existe")
+
     context = {
-        'text': "Titulo Blog",
-        'title': 'Blog',
-        'posts': posts
+        'post': foundPost,
+        'title': foundPost['title'],
     }
     return render(
         request,
-        'blog/index.html',
+        'blog/post.html',
         context=context
     )

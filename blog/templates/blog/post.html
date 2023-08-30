@@ -1,0 +1,18 @@
+{% extends 'global/base.html' %}
+
+{% block texto %}
+{{text}}
+{% endblock texto %}
+
+{% block Posts %}
+<article class="single-post">
+    <header>
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+    </header>
+    <div class="post-body">
+        {{ post.body }}
+    </div>
+</article>
+{% endblock Posts %}
